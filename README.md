@@ -22,3 +22,29 @@ A complete end-to-end Machine Learning project that predicts future stock prices
 ---
 
 ## 📁 Project Structure
+Stock-Price-Prediction-System/ │ ├── README.md # Project documentation ├── requirements.txt # Python dependencies ├── LICENSE # MIT License │ ├── src/ │ ├── init.py # Package initializer │ ├── data_fetcher.py # Download stock data from Yahoo Finance │ ├── data_preprocessing.py # Clean, scale, and prepare data │ ├── feature_engineering.py # Create time-series sequences │ ├── model.py # LSTM model architecture │ ├── train.py # Model training pipeline │ ├── evaluate.py # Evaluation metrics and reporting │ ├── predict.py # Make predictions on new data │ └── visualize.py # Plotting and visualization utilities │ ├── app/ │ └── streamlit_app.py # Streamlit web application │ ├── notebooks/ │ └── exploration.ipynb # Jupyter notebook for EDA │ ├── models/ # Saved trained models │ └── .gitkeep │ ├── data/ # Cached datasets │ └── .gitkeep │ └── images/ # Screenshots and plots └── .gitkeep
+
+
+---
+
+## 🛠️ Tech Stack
+
+| Category        | Technology                          |
+|-----------------|-------------------------------------|
+| Language        | Python 3.9+                         |
+| Deep Learning   | TensorFlow / Keras                  |
+| ML Utilities    | scikit-learn, NumPy, Pandas         |
+| Data Source     | Yahoo Finance (yfinance)            |
+| Visualization   | Matplotlib, Plotly                  |
+| Web App         | Streamlit                           |
+| Model Saving    | Keras `.h5` + Pickle (scaler)       |
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Akhandsikarwar01/Stock-Price-Prediction-System.git
+cd Stock-Price-Prediction-System
