@@ -2,42 +2,57 @@
 
 A complete end-to-end Machine Learning project that predicts future stock prices using **LSTM (Long Short-Term Memory) Neural Networks**. The system fetches real-time historical stock data from Yahoo Finance, trains a deep learning model, and provides an interactive **Streamlit web application** for visualization and prediction.
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.x-red.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-
----
-
 ## 🚀 Features
-
-- **Real-time Data Fetching** — Downloads historical stock data using Yahoo Finance API
-- **Data Preprocessing** — Handles missing values, feature scaling with MinMaxScaler
-- **LSTM Deep Learning Model** — Multi-layer LSTM architecture for time-series forecasting
-- **Model Evaluation** — Performance metrics including MSE, RMSE, and MAE
-- **Interactive Visualization** — Actual vs Predicted price charts using Matplotlib
-- **Streamlit Web App** — User-friendly interface to select tickers and view predictions
-- **Model Persistence** — Trained models saved for reuse without retraining
-
----
+- Real-time Data Fetching (Yahoo Finance)
+- Data Preprocessing (missing values, MinMaxScaler, feature selection)
+- LSTM Deep Learning Model for time-series forecasting
+- Model Evaluation (MSE, RMSE, MAE)
+- Interactive Visualization (Actual vs Predicted)
+- Streamlit Web App for user interaction
+- Model Persistence (Keras + Pickle)
 
 ## 📁 Project Structure
-Stock-Price-Prediction-System/ │ ├── README.md # Project documentation ├── requirements.txt # Python dependencies ├── LICENSE # MIT License │ ├── src/ │ ├── init.py # Package initializer │ ├── data_fetcher.py # Download stock data from Yahoo Finance │ ├── data_preprocessing.py # Clean, scale, and prepare data │ ├── feature_engineering.py # Create time-series sequences │ ├── model.py # LSTM model architecture │ ├── train.py # Model training pipeline │ ├── evaluate.py # Evaluation metrics and reporting │ ├── predict.py # Make predictions on new data │ └── visualize.py # Plotting and visualization utilities │ ├── app/ │ └── streamlit_app.py # Streamlit web application │ ├── notebooks/ │ └── exploration.ipynb # Jupyter notebook for EDA │ ├── models/ # Saved trained models │ └── .gitkeep │ ├── data/ # Cached datasets │ └── .gitkeep │ └── images/ # Screenshots and plots └── .gitkeep
-
-
----
+```
+Stock-Price-Prediction/
+├── README.md
+├── requirements.txt
+├── src/
+│   ├── data_fetcher.py
+│   ├── data_preprocessing.py
+│   ├── feature_engineering.py
+│   ├── model.py
+│   ├── train.py
+│   ├── evaluate.py
+│   ├── predict.py
+│   └── visualize.py
+├── app/
+│   └── streamlit_app.py
+├── data/
+├── models/
+├── notebooks/
+```
 
 ## 🛠️ Tech Stack
+- Python 3.9+
+- pandas, numpy, matplotlib, scikit-learn, tensorflow, yfinance
+- Streamlit
 
-| Category        | Technology                          |
-|-----------------|-------------------------------------|
-| Language        | Python 3.9+                         |
-| Deep Learning   | TensorFlow / Keras                  |
-| ML Utilities    | scikit-learn, NumPy, Pandas         |
-| Data Source     | Yahoo Finance (yfinance)            |
-| Visualization   | Matplotlib, Plotly                  |
-| Web App         | Streamlit                           |
-| Model Saving    | Keras `.h5` + Pickle (scaler)       |
+## ⚡ Quick Start
+1. Install dependencies:
+	```bash
+	pip install -r requirements.txt
+	```
+2. Train the model:
+	```bash
+	python src/train.py
+	```
+3. Run the Streamlit app:
+	```bash
+	streamlit run app/streamlit_app.py
+	```
+
+## 📚 License
+MIT
 
 ---
 
